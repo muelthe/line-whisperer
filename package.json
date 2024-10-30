@@ -4,6 +4,7 @@
   "displayName": "line-whisperer",
   "description": "Preserves your original line endings during copy operations",
   "version": "0.0.1",
+  "repository": "https://github.com/muelthe/line-whisperer",
   "engines": {
     "vscode": "^1.95.0"
   },
