@@ -1,0 +1,56 @@
+{
+  "icon": "./resources/icon.png",
+  "name": "line-whisperer",
+  "displayName": "line-whisperer",
+  "description": "Preserves your original line endings during copy operations",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+        "command": "line-whisperer.preserveCopy",
+        "title": "Copy with Preserved Line Endings"
+    }],
+    "keybindings": [{
+        "command": "line-whisperer.preserveCopy",
+        "key": "ctrl+shift+c",
+        "mac": "cmd+shift+c",
+        "when": "editorTextFocus"
+    }],
+    "configuration": {
+    "title": "Line Whisperer",
+    "properties": {
+        "lineWhisperer.defaultLineEnding": {
+            "type": "string",
+            "enum": ["auto", "LF", "CRLF"],
+            "default": "auto",
+            "description": "Default line ending to use when auto-detection is ambiguous"
+        },
+        "lineWhisperer.showStatusBarIcon": {
+            "type": "boolean",
+            "default": true,
+            "description": "Show/hide the status bar icon"
+        }
+    }
+}
+},
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "eslint": "^9.13.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
