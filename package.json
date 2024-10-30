@@ -1,5 +1,6 @@
 {
   "icon": "./resources/icon.png",
+  "publisher": "muelthe",
   "name": "line-whisperer",
   "displayName": "line-whisperer",
   "description": "Preserves your original line endings during copy operations",
